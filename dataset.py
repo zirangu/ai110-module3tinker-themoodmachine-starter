@@ -50,6 +50,21 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+    "lowkey stressed but kind of proud of myself ngl",
+    "I absolutely LOVE getting stuck in traffic for 2 hours 🙃",
+    "ngl today was actually kind of amazing no cap",
+    "idk why I'm crying rn, I think I'm just tired 🥲",
+    "finally finished the project omg I'm so relieved",
+    "bro really said that to my face 💀 I'm done",
+    "just vibing, nothing special today",
+    "highkey anxious about tomorrow but trying to stay chill",
+    "can't stop smiling today everything is going right 😂",
+    "I'm fine. I'm totally fine. everything is fine.",
+    "I love getting stuck in traffic",
+    "this new track is sick",
+    "lmao this whole situation is fire, in the worst way",
+    "I'm fine 🙂",
+    "exhausted but proud of myself",
 ]
 
 # Human labels for each post above.
@@ -65,30 +80,48 @@ TRUE_LABELS = [
     "neutral",   # "This is fine"
     "positive",  # "So excited for the weekend"
     "negative",  # "I am not happy about this"
+    "mixed",     # "lowkey stressed but kind of proud of myself ngl"
+    "negative",  # sarcasm: "I absolutely LOVE getting stuck in traffic for 2 hours 🙃"
+    "positive",  # "ngl today was actually kind of amazing no cap"
+    "negative",     # "idk why I'm crying rn, I think I'm just tired 🥲"
+    "positive",  # "finally finished the project omg I'm so relieved"
+    "negative",  # "bro really said that to my face 💀 I'm done"
+    "neutral",   # "just vibing, nothing special today"
+    "mixed",     # "highkey anxious about tomorrow but trying to stay chill"
+    "positive",  # "can't stop smiling today everything is going right 😂"
+    "negative",  # sarcasm: "I'm fine. I'm totally fine. everything is fine."
+    "negative",  # sarcasm: "I love getting stuck in traffic"
+    "positive",  # slang: "this new track is sick"
+    "negative",  # slang, negated: "lmao this whole situation is fire, in the worst way"
+    "negative",  # sarcasm/emoji: "I'm fine 🙂"
+    "mixed",     # "exhausted but proud of myself"
 ]
 
-# TODO: Add 5-10 more posts and labels.
-#
-# Requirements:
-#   - For every new post you add to SAMPLE_POSTS, you must add one
-#     matching label to TRUE_LABELS.
-#   - SAMPLE_POSTS and TRUE_LABELS must always have the same length.
-#   - Include a variety of language styles, such as:
-#       * Slang ("lowkey", "highkey", "no cap")
-#       * Emojis (":)", ":(", "🥲", "😂", "💀")
-#       * Sarcasm ("I absolutely love getting stuck in traffic")
-#       * Ambiguous or mixed feelings
-#
-# Tips:
-#   - Try to create some examples that are hard to label even for you.
-#   - Make a note of any examples that you and a friend might disagree on.
-#     Those "edge cases" are interesting to inspect for both the rule based
-#     and ML models.
-#
-# Example of how you might extend the lists:
-#
-# SAMPLE_POSTS.append("Lowkey stressed but kind of proud of myself")
-# TRUE_LABELS.append("mixed")
-#
+# SAMPLE_POSTS.extend([
+#     "lowkey stressed but kind of proud of myself ngl",
+#     "I absolutely LOVE getting stuck in traffic for 2 hours 🙃",
+#     "ngl today was actually kind of amazing no cap",
+#     "idk why I'm crying rn, I think I'm just tired 🥲",
+#     "finally finished the project omg I'm so relieved",
+#     "bro really said that to my face 💀 I'm done",
+#     "just vibing, nothing special today",
+#     "highkey anxious about tomorrow but trying to stay chill",
+#     "can't stop smiling today everything is going right 😂",
+#     "I'm fine. I'm totally fine. everything is fine.",
+# ])
+
+# TRUE_LABELS.extend([
+#     "mixed",     # "lowkey stressed but kind of proud of myself ngl"
+#     "negative",  # sarcasm: "I absolutely LOVE getting stuck in traffic for 2 hours 🙃"
+#     "positive",  # "ngl today was actually kind of amazing no cap"
+#     "mixed",     # "idk why I'm crying rn, I think I'm just tired 🥲"
+#     "positive",  # "finally finished the project omg I'm so relieved"
+#     "negative",  # "bro really said that to my face 💀 I'm done"
+#     "neutral",   # "just vibing, nothing special today"
+#     "mixed",     # "highkey anxious about tomorrow but trying to stay chill"
+#     "positive",  # "can't stop smiling today everything is going right 😂"
+#     "negative",  # sarcasm/denial: "I'm fine. I'm totally fine. everything is fine."
+# ])
+
 # Remember to keep them aligned:
 #   len(SAMPLE_POSTS) == len(TRUE_LABELS)
